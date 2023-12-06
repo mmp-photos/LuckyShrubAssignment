@@ -18,6 +18,11 @@ Color palette selected from ColorPalettes.net - Color Palette #4570.
     --light-green: #759242;
     --tan: #DED3A6;
     --off-white: #F2F2EF;
+    --yellow: #fef7c6;
+
+    /* Text Definitions */
+    --small-text: .7rem;
+    --mid-size: 1.5rem;
 }
 
 /* Structural Semantic Styles */
@@ -179,17 +184,23 @@ Color palette selected from ColorPalettes.net - Color Palette #4570.
         line-height: 3.25rem;
         margin-top: 0px;
     }
-
     h2 {
         font-size: 1.5rem;
     }
-
     h3 {
         color: #DED3A6;
         font-size: 2rem;
         font-family: "quasimoda", sans-serif;
         font-weight: 600;
         font-style: italic;
+    }
+    h4 {
+        color: var(--light-green);
+        font-size: var(--mid-size);
+        font-family: "quasimoda", sans-serif;
+        font-weight: 600;
+        font-style: italic;
+        line-height: 0px;
     }
     section {
         padding: 0px;
@@ -318,11 +329,49 @@ Color palette selected from ColorPalettes.net - Color Palette #4570.
         width: 100vw;
         height: 100vh;
     }
+    #store-section {
+        flex-wrap: wrap;
+    }
+    #store-section div {
+        position: relative;
+        width: 180px;
+        margin: 10px;
+        overflow: hidden;
+        background-image: linear-gradient(180deg, #F2F2EF 30%, white 50%,#F2F2EF 100%);
+        padding: 0px 9px 9px 9px;
+        font-size: var(--small-text);
+        text-align: justify;
+    }
+    #store-section button {
+        position:absolute;
+        bottom: 9px;
+        display:block;
+        width: 80%;
+        background-color: var(--light-green);
+        color: #F2F2EF;
+        font-size: 1rem;
+        padding: 2px;
+        margin-bottom: 2px;
+        margin-right: 2px;
+    }
+    #store-section button:hover {
+        color: var(--yellow);
+        border-color: var(--near-black);
+        margin-bottom: 0px;
+        margin-right: 0px;
+    }
 /* Utility Classes */
     .center {
         margin-left: auto;
         margin-right: auto;
         text-align: center;
+    }
+    .img100 {
+        max-width: 100%
+    }
+    .img70{
+        display: block;
+        max-width: 70%;
     }
     .flex25 {
         flex: 1;
@@ -334,6 +383,9 @@ Color palette selected from ColorPalettes.net - Color Palette #4570.
         align-items: center;
         justify-content: center;
         text-align: center;
+    }
+    .mb40 {
+        margin-bottom: 40px;
     }
     .mr20{
         margin-right: 20px;
@@ -450,6 +502,10 @@ Color palette selected from ColorPalettes.net - Color Palette #4570.
         }
         .sm-show{
             display: block;
+        }
+        #store-section div {
+            width: 95%;
+            margin-right: 2px;
         }
     }
 /* Animation Styles */
